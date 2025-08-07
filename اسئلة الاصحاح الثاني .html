@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبار سفر أعمال الرسل</title>
+  <style>
+    body {
+      background: #f2f2f2;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    #quiz-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .option {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .option:hover {
+      background: #e0f7fa;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      background: #4caf50;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <div id="question-container">
+      <div id="question" class="question"></div>
+      <div id="options"></div>
+      <button id="next-btn">التالي</button>
+    </div>
+    <div id="result" style="display:none;"></div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "كان يوم الخمسين ________ يوم حلول الروح القدس.",
+        options: [
+          "يُسمى عيد الأسبوعين",
+          "يُسمى عيد الأبواق",
+          "يُسمى عيد الأسابيع",
+          "يُسمى عيد المظال"
+        ],
+        correct: 2
+      },
+      {
+        question: "كم عدد التلاميذ الذين كانوا مجتمعين في العلية؟",
+        options: [
+          "١١",
+          "١٢٠",
+          "٧٠",
+          "١٢"
+        ],
+        correct: 1
+      },
+      {
+        question: "من هو التلميذ الذي اختير بدلًا من يهوذا الإسخريوطي؟",
+        options: [
+          "برنابا",
+          "متى",
+          "مرقس",
+          "متياس"
+        ],
+        correct: 3
+      },
+      {
+        question: "ما هي اللغة التي تكلم بها التلاميذ بعد حلول الروح القدس؟",
+        options: [
+          "اللغة اليونانية فقط",
+          "كل واحد سمعهم بلغته",
+          "العبرية فقط",
+          "الآرامية فقط"
+        ],
+        correct: 1
+      },
+      {
+        question: "كم عدد الذين آمنوا وانضموا في يوم الخمسين؟",
+        options: [
+          "٥٠٠",
+          "٣٠٠٠",
+          "١٠٠٠",
+          "١٢٠"
+        ],
+        correct: 1
+      },
+      {
+        question: "من الذي وعظ في يوم الخمسين؟",
+        options: [
+          "بطرس",
+          "يوحنا",
+          "يعقوب",
+          "متى"
+        ],
+        correct: 0
+      },
+      {
+        question: "في أي مكان كانوا مجتمعين عندما حل الروح القدس؟",
+        options: [
+          "في البرية",
+          "في العلية",
+          "في الهيكل",
+          "في الجليل"
+        ],
+        correct: 1
+      },
+      {
+        question: "بماذا شبهت ألسنة الروح القدس؟",
+        options: [
+          "رياح قوية",
+          "ألسنة نار",
+          "أمطار",
+          "غيوم"
+        ],
+        correct: 1
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const nextBtn = document.getElementById("next-btn");
+    const resultEl = document.getElementById("result");
+
+    function loadQuestion() {
+      const q = quizData[currentQuestion];
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = "";
+
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.classList.add("option");
+        btn.onclick = () => checkAnswer(index);
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const correct = quizData[currentQuestion].correct;
+      if (selected === correct) score++;
+      currentQuestion++;
+
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById("question-container").style.display = "none";
+      resultEl.style.display = "block";
+      resultEl.textContent = `نتيجتك: ${score} من ${quizData.length}`;
+    }
+
+    nextBtn.onclick = () => {
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    };
+
+    // أول سؤال عند الفتح
+    loadQuestion();
+  </script>
+</body>
+</html>
+<!-- هنا رابط ينقلك للصفحة الثانية -->
+  <a href="الاصحاح الثالث .html">انتقل إلى الصفحة الثانية</a> 

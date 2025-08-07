@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبار أعمال الرسل - الإصحاح الثالث</title>
+  <style>
+    body {
+      background: #f2f2f2;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    #quiz-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .option {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .option:hover {
+      background: #e0f7fa;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      background: #4caf50;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <div id="question-container">
+      <div id="question" class="question"></div>
+      <div id="options"></div>
+      <button id="next-btn">التالي</button>
+    </div>
+    <div id="result" style="display:none;"></div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "أول معجزة تمت على أيدي الرسل هي شفاء ____________",
+        options: ["الأبرص", "الأعرج", "الأعمي", "طابيثا"],
+        correct: 1
+      },
+      {
+        question: "تقابل بطرس ويوحنا مع الرجل الأعرج عندما كانا ذاهبين ل ____________",
+        options: ["التعليم في الهيكل", "الصلاة في الهيكل", "دفع الصدقة", "تطهير الهيكل"],
+        correct: 1
+      },
+      {
+        question: "نظر الرجل الأعرج إلى بطرس ويوحنا لأنه أراد منهما ____________",
+        options: ["صدقة", "أن يشفياه", "أن يعطياه الروح القدس", "أن يُصليا لأجله"],
+        correct: 0
+      },
+      {
+        question: "من خلال إقامة الأعرج عند باب الهيكل، نستنتج أن التلاميذ كانوا يذهبون للصلاة في الهيكل ____________",
+        options: ["في ساعات معينة", "في النهار", "كل يوم سبت", "في الاجتماعات اليومية"],
+        correct: 0
+      },
+      {
+        question: "معجزة شفاء المقعد تصور لنا خلاص الله، لأنها ____________",
+        options: ["تمت مع إنسان عاجز من بطن أمه", "الشفاء كان لحظيًا ومجانيًا", "الشفاء كان بقوة الرب وباسمه وبإيمان وانتج سجودًا", "كل ما سبق صحيح"],
+        correct: 3
+      },
+      {
+        question: "كلمة 'الجميل' في هذا الإصحاح هي اسم ____________",
+        options: ["شاب حسن الصورة", "أحد أبواب الهيكل", "منطقة شاطئية", "حقل للزهور"],
+        correct: 1
+      },
+      {
+        question: "من معجزة إقامة الأعرج نتعلم ____________",
+        options: ["إن تصدقنا على الفقراء بالمال، اسم يسوع يعوضنا", "إن كنا فقراء من المال، اسم يسوع يغنينا", "إن تصدقنا على الفقراء بالمال، بركة يسوع تغنينا", "إن كنا فقراء من المال، بركة يسوع تشبعنا"],
+        correct: 3
+      },
+      {
+        question: "قال الرب لتلميذي عمواس كلمات تشبه ما قاله بطرس في ____________",
+        options: ["أع 3:16", "أع 3:17", "أع 3:18", "أع 3:19"],
+        correct: 2
+      },
+      {
+        question: "الآية 'فَإِنَّ مُوسَى قَالَ لِلآبَاءِ...' اقتبسها بطرس من سفر ____________",
+        options: ["التثنية 18", "التثنية 28", "التثنية 13", "التثنية 10"],
+        correct: 0
+      },
+      {
+        question: "في الآية 'إِنَّ نَبِيًّا مِثْلِي...' النبي المقصود هو المسيح، وهو مثل موسى من جهة ____________",
+        options: ["النبوة", "حمله لشريعة العهد الجديد", "تخليصه لشعبه من يد الشيطان", "كل ما سبق صحيح"],
+        correct: 3
+      },
+      {
+        question: "عندما أمسك بطرس الأعرج، فإنه ____________",
+        options: ["وثب", "سجد", "شكر", "رقد"],
+        correct: 0
+      },
+      {
+        question: "ليتنا نتمثل بالأعرج حين شفاه بطرس ويوحنا، إذ أنه ____________",
+        options: ["دخل الهيكل يسبح الله", "أعطى كل ما عنده للفقراء", "وقف يحدثهما على الباب", "طلب ماء ليعتمد"],
+        correct: 0
+      },
+      {
+        question: "نجد القفز والترنم والتسبيح بعد الشفاء في ____________",
+        options: ["أع 3:8", "أع 3:9", "أع 3:10", "أع 3:11"],
+        correct: 0
+      },
+      {
+        question: "كانت دعوة بطرس في عظته بعد شفاء الأعرج أن ____________",
+        options: ["يتوبوا ويرجعوا", "يصلوا ويركعوا", "يصغوا ويسمعوا", "يشفوا ويسرعوا"],
+        correct: 0
+      },
+      {
+        question: "أول نبي بعد موسى وتنبأ عن الرب هو ____________",
+        options: ["إشعياء", "حزقيال", "دانيال", "صموئيل"],
+        correct: 3
+      },
+      {
+        question: "بطرس يرجع المجد في الشفاء ليسوع، وهذا نجده أيضًا مع ____________",
+        options: ["موسى وداود ودانيال", "يوسف وداود ودانيال", "لا شيء مما سبق", "موسى فقط"],
+        correct: 0
+      },
+      {
+        question: "الآية 'مَجَّدَ فَتَاهُ يَسُوعَ' تحقق ذلك بـ ____________",
+        options: ["التجسد والفداء", "الآلام والصلب", "القيامة والصعود", "لا شيء مما سبق"],
+        correct: 2
+      },
+      {
+        question: "لقب بطرس اليهود في عظته بأنهم ____________",
+        options: ["أبناء الله", "أبناء متمردين", "أبناء الأنبياء", "أبناء الملكوت"],
+        correct: 2
+      },
+      {
+        question: "آخر شخصية من العهد القديم ذكرها بطرس في عظته هي ____________",
+        options: ["إبراهيم", "موسى", "داود", "صموئيل"],
+        correct: 0
+      },
+      {
+        question: "عظة بطرس تشبه عظة يوم الخمسين من حيث ____________",
+        options: ["إثبات قيامة المسيح", "إظهار خطية اليهود", "الدعوة للتوبة", "كل ما سبق صحيح"],
+        correct: 3
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const nextBtn = document.getElementById("next-btn");
+    const resultEl = document.getElementById("result");
+
+    function loadQuestion() {
+      const q = quizData[currentQuestion];
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = "";
+
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.classList.add("option");
+        btn.onclick = () => checkAnswer(index);
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const correct = quizData[currentQuestion].correct;
+      if (selected === correct) score++;
+      currentQuestion++;
+
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById("question-container").style.display = "none";
+      resultEl.style.display = "block";
+      resultEl.textContent = `نتيجتك: ${score} من ${quizData.length}`;
+    }
+
+    nextBtn.onclick = () => {
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    };
+
+    // أول سؤال
+    loadQuestion();
+  </script>
+</body>
+</html>
