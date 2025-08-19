@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title class="coptic-text">ⲟⲩⲛⲁⲓ - مسابقة سفر أعمال الرسل</title>
+  <style>
+    @font-face {
+      font-family: 'coptic';
+      src: url('Veni.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .coptic-text{
+      font-family: 'coptic', sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      text-align: right;
+      padding: 40px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .question {
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="coptic-text">ⲟⲩⲛⲁⲓ - مسابقة سفر أعمال الرسل</h1>
+
+    <h2>أسئلة الإصحاح الرابع</h2>
+
+    <form id="quizForm">
+      <div class="question">
+        <label>1- من الذين انزعجوا من تعليم بطرس ويوحنا الشعب؟</label>
+        <input type="radio" name="q1" value="صح"> الكهنة ورئيس جند الهيكل والصدوقيون<br>
+        <input type="radio" name="q1" value="غلط"> الفريسيون والكتبة فقط<br>
+      </div>
+
+      <div class="question">
+        <label>2- كم كان عدد الرجال الذين آمنوا بعد الكرازة؟</label>
+        <input type="radio" name="q2" value="صح"> نحو خمسة آلاف<br>
+        <input type="radio" name="q2" value="غلط"> ألف فقط<br>
+      </div>
+
+      <div class="question">
+        <label>3- أمام من وُضع بطرس ويوحنا للمحاكمة؟</label>
+        <input type="radio" name="q3" value="صح"> رؤساء الكهنة والشيوخ والكتبة<br>
+        <input type="radio" name="q3" value="غلط"> بيلاطس وهيرودس<br>
+      </div>
+
+      <div class="question">
+        <label>4- بماذا امتلأ بطرس عندما أجاب المجمع؟</label>
+        <input type="radio" name="q4" value="صح"> من الروح القدس<br>
+        <input type="radio" name="q4" value="غلط"> من الغضب والخوف<br>
+      </div>
+
+      <div class="question">
+        <label>5- ما هو الاسم الذي قال بطرس إنه به شُفي الأعرج؟</label>
+        <input type="radio" name="q5" value="صح"> يسوع المسيح الناصري<br>
+        <input type="radio" name="q5" value="غلط"> بولس الطرسوسي<br>
+      </div>
+
+      <div class="question">
+        <label>6- ماذا قال بطرس عن الخلاص؟</label>
+        <input type="radio" name="q6" value="صح"> ليس بأحد غيره الخلاص<br>
+        <input type="radio" name="q6" value="غلط"> يوجد خلاص في الناموس<br>
+      </div>
+
+      <div class="question">
+        <label>7- لماذا تعجبوا من بطرس ويوحنا؟</label>
+        <input type="radio" name="q7" value="صح"> لأنهم إنسانان عديمان العلم وعاميان<br>
+        <input type="radio" name="q7" value="غلط"> لأنهم كانوا كهنة مشهورين<br>
+      </div>
+
+      <div class="question">
+        <label>8- ماذا أمرهم المجمع؟</label>
+        <input type="radio" name="q8" value="صح"> أن لا ينطقوا ولا يعلّموا باسم يسوع<br>
+        <input type="radio" name="q8" value="غلط"> أن يتركوا أورشليم فورًا<br>
+      </div>
+
+      <div class="question">
+        <label>9- ماذا فعل المؤمنون عندما سمعوا خبر التهديد؟</label>
+        <input type="radio" name="q9" value="صح"> رفعوا بنفس واحدة صوتهم إلى الله<br>
+        <input type="radio" name="q9" value="غلط"> تفرقوا كل واحد إلى بيته<br>
+      </div>
+
+      <div class="question">
+        <label>10- ماذا حدث بعدما صلوا جميعًا؟</label>
+        <input type="radio" name="q10" value="صح"> تزعزع المكان وامتلأوا جميعًا من الروح القدس<br>
+        <input type="radio" name="q10" value="غلط"> نزل نار من السماء وأحرقت المجمع<br>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">إرسال</button>
+    </form>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+      const total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const answer = document.querySelector('input[name="q' + i + '"]:checked');
+        if (answer && answer.value === "صح") score++;
+      }
+
+      document.getElementById("result").innerText =
+        "درجتك: " + score + " من " + total;
+    }
+  </script>
+</body>
+</html>
