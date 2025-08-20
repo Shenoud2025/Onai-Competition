@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>اختبار أعمال الرسل - الإصحاح 15</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  padding: 15px;
+}
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+.question {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin: 5px 0;
+}
+.correct {
+  color: green;
+  font-weight: bold;
+}
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+button {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>اختبار أعمال الرسل - الإصحاح 15</h1>
+
+<div class="question">
+  <p>1. من جاء إلى أنطاكية وبدأ يعلم أن الخلاص لا يكون إلا بالختان؟</p>
+  <label><input type="radio" name="q1" value="wrong"> بولس وبرنابا</label>
+  <label><input type="radio" name="q1" value="correct"> بعض اليهود من أورشليم</label>
+  <label><input type="radio" name="q1" value="wrong"> بطرس ويوحنا</label>
+</div>
+
+<div class="question">
+  <p>2. من تكلم في الاجتماع وذكر أن الله أعطى الخلاص للأمم؟</p>
+  <label><input type="radio" name="q2" value="wrong"> بولس</label>
+  <label><input type="radio" name="q2" value="correct"> بطرس</label>
+  <label><input type="radio" name="q2" value="wrong"> برنابا</label>
+</div>
+
+<div class="question">
+  <p>3. ما الأمور التي قرر الرسل والشيوخ أن يمتنع عنها الأمم؟</p>
+  <label><input type="radio" name="q3" value="wrong"> الخبز والخمر والزيت</label>
+  <label><input type="radio" name="q3" value="correct"> الأصنام، الدم، المخنوق، والزنا</label>
+  <label><input type="radio" name="q3" value="wrong"> الصلاة والصوم</label>
+</div>
+
+<div class="question">
+  <p>4. من الرسل الذين أرسلوا مع بولس وبرنابا لإيصال الرسالة إلى الأمم؟</p>
+  <label><input type="radio" name="q4" value="wrong"> بطرس ويوحنا</label>
+  <label><input type="radio" name="q4" value="correct"> يهوذا (برسابا) وسِلا</label>
+  <label><input type="radio" name="q4" value="wrong"> مرقس ولوقا</label>
+</div>
+
+<div class="question">
+  <p>5. لماذا حدث خلاف بين بولس وبرنابا؟</p>
+  <label><input type="radio" name="q5" value="wrong"> بسبب المال</label>
+  <label><input type="radio" name="q5" value="wrong"> بسبب اختيار المدينة</label>
+  <label><input type="radio" name="q5" value="correct"> بسبب مرقس الذي تركهم في الرحلة الأولى</label>
+</div>
+
+<button onclick="checkAnswers()">تحقق من الإجابات</button>
+
+<p id="result"></p>
+
+<script>
+function checkAnswers() {
+  let total = 5;
+  let score = 0;
+  for(let i=1; i<=total; i++){
+    let radios = document.getElementsByName('q'+i);
+    for(let r of radios){
+      if(r.checked && r.value === 'correct'){
+        score++;
+      }
+    }
+  }
+  document.getElementById('result').innerHTML = "لقد حصلت على " + score + " من " + total;
+}
+</script>
+<a href="الاصحاح 16 .html">التالي</a>
+</body>
+</html>

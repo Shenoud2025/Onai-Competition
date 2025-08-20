@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مسابقة أعمال الرسل - إصحاح 9</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      text-align: right;
+      padding: 30px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    h1 {
+      color: #4CAF50;
+      text-align: center;
+    }
+    .question {
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>مسابقة سفر أعمال الرسل - إصحاح ٩</h1>
+
+    <form id="quizForm">
+      <div class="question">1. من هو الشخص الذي كان ينفث تهددًا وقتلًا على تلاميذ الرب؟</div>
+      <input type="radio" name="q1" value="شاول"> شاول<br>
+      <input type="radio" name="q1" value="بطرس"> بطرس<br>
+      <input type="radio" name="q1" value="يعقوب"> يعقوب<br>
+
+      <div class="question">2. إلى من ذهب شاول ليأخذ رسائل توصية للقبض على المسيحيين في دمشق؟</div>
+      <input type="radio" name="q2" value="الكهنة"> الكهنة<br>
+      <input type="radio" name="q2" value="رئيس الكهنة"> رئيس الكهنة<br>
+      <input type="radio" name="q2" value="الولاة"> الولاة<br>
+
+      <div class="question">3. ماذا حدث لشاول في طريقه إلى دمشق؟</div>
+      <input type="radio" name="q3" value="نور من السماء"> أبرق حوله نور من السماء<br>
+      <input type="radio" name="q3" value="زلزال"> زلزال<br>
+      <input type="radio" name="q3" value="صوت ملاك"> صوت ملاك<br>
+
+      <div class="question">4. من هو التلميذ الذي أرسله الرب ليضع يده على شاول؟</div>
+      <input type="radio" name="q4" value="حنانيا"> حنانيا<br>
+      <input type="radio" name="q4" value="برنابا"> برنابا<br>
+      <input type="radio" name="q4" value="مرقس"> مرقس<br>
+
+      <div class="question">5. من هي التلميذة التي أقامها بطرس في يافا؟</div>
+      <input type="radio" name="q5" value="مريم"> مريم<br>
+      <input type="radio" name="q5" value="طابيثا"> طابيثا (غزالة)<br>
+      <input type="radio" name="q5" value="مرثا"> مرثا<br>
+
+      <button type="button" onclick="checkAnswers()">إرسال الإجابات</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      let correctAnswers = {
+        q1: "شاول",
+        q2: "رئيس الكهنة",
+        q3: "نور من السماء",
+        q4: "حنانيا",
+        q5: "طابيثا"
+      };
+
+      let score = 0;
+      let total = Object.keys(correctAnswers).length;
+
+      for (let q in correctAnswers) {
+        let answer = document.querySelector('input[name="'+q+'"]:checked');
+        if (answer && answer.value === correctAnswers[q]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").innerText =
+        "نتيجتك: " + score + " من " + total;
+    }
+  </script>
+</body>
+</html>
+<a href="الاصحاح العاشر .html"></a>
