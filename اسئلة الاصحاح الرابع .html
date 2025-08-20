@@ -1,154 +1,160 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title class="coptic-text">ⲟⲩⲛⲁⲓ - مسابقة سفر أعمال الرسل</title>
+  <meta charset="UTF-8">
+  <title>مسابقة سفر أعمال الرسل - الأصحاح الرابع</title>
   <style>
-    @font-face {
-      font-family: 'coptic';
-      src: url('Veni.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    .coptic-text{
-      font-family: 'coptic', sans-serif;
-    }
     body {
-      background: #f9f9f9;
       font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 20px;
       direction: rtl;
       text-align: right;
-      padding: 40px;
-      color: #333;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ddd;
     }
     h1 {
-      color: #4CAF50;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
+      color: #2c3e50;
+      text-align: center;
     }
     .question {
-      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
     button {
-      margin-top: 30px;
+      display: block;
+      margin: 20px auto;
       padding: 10px 20px;
       font-size: 16px;
-      background: #4CAF50;
-      color: #fff;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      background: #3498db;
+      color: white;
       cursor: pointer;
     }
-    .result {
-      margin-top: 20px;
+    button:hover {
+      background: #2980b9;
+    }
+    #result {
+      text-align: center;
       font-size: 18px;
+      margin-top: 20px;
       font-weight: bold;
-      color: #333;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="coptic-text">ⲟⲩⲛⲁⲓ - مسابقة سفر أعمال الرسل</h1>
 
-    <h2>أسئلة الإصحاح الرابع</h2>
+  <h1>مسابقة سفر أعمال الرسل - الأصحاح الرابع</h1>
 
-    <form id="quizForm">
-      <div class="question">
-        <label>1- من الذين انزعجوا من تعليم بطرس ويوحنا الشعب؟</label>
-        <input type="radio" name="q1" value="صح"> الكهنة ورئيس جند الهيكل والصدوقيون<br>
-        <input type="radio" name="q1" value="غلط"> الفريسيون والكتبة فقط<br>
-      </div>
+  <form id="quizForm">
 
-      <div class="question">
-        <label>2- كم كان عدد الرجال الذين آمنوا بعد الكرازة؟</label>
-        <input type="radio" name="q2" value="صح"> نحو خمسة آلاف<br>
-        <input type="radio" name="q2" value="غلط"> ألف فقط<br>
-      </div>
+    <div class="question">
+      <p>1- من الذين تكلموا مع بطرس ويوحنا بسبب التعليم؟</p>
+      <label><input type="radio" name="q1" value="a"> الكتبة والفريسيون</label><br>
+      <label><input type="radio" name="q1" value="b"> الكهنة وصادوقيون وحراس الهيكل</label><br>
+      <label><input type="radio" name="q1" value="c"> الشعب</label>
+    </div>
 
-      <div class="question">
-        <label>3- أمام من وُضع بطرس ويوحنا للمحاكمة؟</label>
-        <input type="radio" name="q3" value="صح"> رؤساء الكهنة والشيوخ والكتبة<br>
-        <input type="radio" name="q3" value="غلط"> بيلاطس وهيرودس<br>
-      </div>
+    <div class="question">
+      <p>2- كم كان عدد الرجال المؤمنين بعد عظة بطرس؟</p>
+      <label><input type="radio" name="q2" value="a"> ثلاثة آلاف</label><br>
+      <label><input type="radio" name="q2" value="b"> خمسة آلاف</label><br>
+      <label><input type="radio" name="q2" value="c"> سبعة آلاف</label>
+    </div>
 
-      <div class="question">
-        <label>4- بماذا امتلأ بطرس عندما أجاب المجمع؟</label>
-        <input type="radio" name="q4" value="صح"> من الروح القدس<br>
-        <input type="radio" name="q4" value="غلط"> من الغضب والخوف<br>
-      </div>
+    <div class="question">
+      <p>3- من هو رئيس الكهنة الذي اجتمع مع شيوخ اليهود ضد التلاميذ؟</p>
+      <label><input type="radio" name="q3" value="a"> قيافا</label><br>
+      <label><input type="radio" name="q3" value="b"> حنان</label><br>
+      <label><input type="radio" name="q3" value="c"> هيرودس</label>
+    </div>
 
-      <div class="question">
-        <label>5- ما هو الاسم الذي قال بطرس إنه به شُفي الأعرج؟</label>
-        <input type="radio" name="q5" value="صح"> يسوع المسيح الناصري<br>
-        <input type="radio" name="q5" value="غلط"> بولس الطرسوسي<br>
-      </div>
+    <div class="question">
+      <p>4- بماذا امتلأ بطرس عندما وقف أمام المجمع؟</p>
+      <label><input type="radio" name="q4" value="a"> حكمة</label><br>
+      <label><input type="radio" name="q4" value="b"> الروح القدس</label><br>
+      <label><input type="radio" name="q4" value="c"> قوة</label>
+    </div>
 
-      <div class="question">
-        <label>6- ماذا قال بطرس عن الخلاص؟</label>
-        <input type="radio" name="q6" value="صح"> ليس بأحد غيره الخلاص<br>
-        <input type="radio" name="q6" value="غلط"> يوجد خلاص في الناموس<br>
-      </div>
+    <div class="question">
+      <p>5- ماذا قال بطرس عن الحجر الذي رفضه البناؤون؟</p>
+      <label><input type="radio" name="q5" value="a"> صار حجر معثرة</label><br>
+      <label><input type="radio" name="q5" value="b"> صار رأس الزاوية</label><br>
+      <label><input type="radio" name="q5" value="c"> صار أساس البيت</label>
+    </div>
 
-      <div class="question">
-        <label>7- لماذا تعجبوا من بطرس ويوحنا؟</label>
-        <input type="radio" name="q7" value="صح"> لأنهم إنسانان عديمان العلم وعاميان<br>
-        <input type="radio" name="q7" value="غلط"> لأنهم كانوا كهنة مشهورين<br>
-      </div>
+    <div class="question">
+      <p>6- ماذا لاحظوا على بطرس ويوحنا فعجبوا؟</p>
+      <label><input type="radio" name="q6" value="a"> أنهما صيادان</label><br>
+      <label><input type="radio" name="q6" value="b"> أنهما عديمان العلم وعاميان</label><br>
+      <label><input type="radio" name="q6" value="c"> أنهما من الجليل</label>
+    </div>
 
-      <div class="question">
-        <label>8- ماذا أمرهم المجمع؟</label>
-        <input type="radio" name="q8" value="صح"> أن لا ينطقوا ولا يعلّموا باسم يسوع<br>
-        <input type="radio" name="q8" value="غلط"> أن يتركوا أورشليم فورًا<br>
-      </div>
+    <div class="question">
+      <p>7- بماذا هدد المجمع بطرس ويوحنا؟</p>
+      <label><input type="radio" name="q7" value="a"> ألا يتكلما ولا يعلما باسم يسوع</label><br>
+      <label><input type="radio" name="q7" value="b"> أن يتركا أورشليم</label><br>
+      <label><input type="radio" name="q7" value="c"> أن يدفعا جزية</label>
+    </div>
 
-      <div class="question">
-        <label>9- ماذا فعل المؤمنون عندما سمعوا خبر التهديد؟</label>
-        <input type="radio" name="q9" value="صح"> رفعوا بنفس واحدة صوتهم إلى الله<br>
-        <input type="radio" name="q9" value="غلط"> تفرقوا كل واحد إلى بيته<br>
-      </div>
+    <div class="question">
+      <p>8- ماذا أجاب بطرس ويوحنا عند تهديدهم؟</p>
+      <label><input type="radio" name="q8" value="a"> ينبغي أن يطاع الله أكثر من الناس</label><br>
+      <label><input type="radio" name="q8" value="b"> لن نصمت</label><br>
+      <label><input type="radio" name="q8" value="c"> أنتم لا سلطان لكم علينا</label>
+    </div>
 
-      <div class="question">
-        <label>10- ماذا حدث بعدما صلوا جميعًا؟</label>
-        <input type="radio" name="q10" value="صح"> تزعزع المكان وامتلأوا جميعًا من الروح القدس<br>
-        <input type="radio" name="q10" value="غلط"> نزل نار من السماء وأحرقت المجمع<br>
-      </div>
+    <div class="question">
+      <p>9- ماذا كان المؤمنون يفعلون بعدما أطلق سراح بطرس ويوحنا؟</p>
+      <label><input type="radio" name="q9" value="a"> اجتمعوا وصلوا</label><br>
+      <label><input type="radio" name="q9" value="b"> خرجوا للكرازة</label><br>
+      <label><input type="radio" name="q9" value="c"> عادوا للصيد</label>
+    </div>
 
-      <button type="button" onclick="checkAnswers()">إرسال</button>
-    </form>
+    <div class="question">
+      <p>10- كيف كان حال الذين آمنوا جميعًا؟</p>
+      <label><input type="radio" name="q10" value="a"> كانوا قلبًا واحدًا ونفسًا واحدة</label><br>
+      <label><input type="radio" name="q10" value="b"> كانوا منقسمين</label><br>
+      <label><input type="radio" name="q10" value="c"> كل واحد لنفسه</label>
+    </div>
 
-    <div class="result" id="result"></div>
-  </div>
+    <button type="button" onclick="checkAnswers()">عرض النتيجة</button>
+  </form>
+
+  <div id="result"></div>
 
   <script>
     function checkAnswers() {
-      let score = 0;
-      const total = 10;
+      const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "b",
+        q4: "b",
+        q5: "b",
+        q6: "b",
+        q7: "a",
+        q8: "a",
+        q9: "a",
+        q10: "a"
+      };
 
-      for (let i = 1; i <= total; i++) {
-        const answer = document.querySelector('input[name="q' + i + '"]:checked');
-        if (answer && answer.value === "صح") score++;
+      let score = 0;
+      const form = document.forms["quizForm"];
+
+      for (let key in answers) {
+        const selected = form[key].value;
+        if (selected === answers[key]) {
+          score++;
+        }
       }
 
       document.getElementById("result").innerText =
-        "درجتك: " + score + " من " + total;
+        "درجتك: " + score + " من " + Object.keys(answers).length;
     }
-       <a href="الاصحاح الخامس.html">الإصحاح 5</a>
-  </script> 
+  </script>
+
 </body>
 </html>
-
-       <a href="الاصحاح الخامس.html">الإصحاح 5</a>
-
-
+      <a href="الاصحاح الخامس.html">5الإصحاح </a>
