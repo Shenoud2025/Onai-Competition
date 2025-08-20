@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أسئلة أعمال الرسل - الإصحاح 14</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+    .question {
+      background-color: #eef6ff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #3498db;
+      border-radius: 4px;
+    }
+    .submit-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .submit-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+<h1>أسئلة أعمال الرسل - الإصحاح 14</h1>
+
+<div class="question">
+  <p>1. في أي مدينتين بشر بولس وبرنابا في هذا الإصحاح؟</p>
+  <input type="radio" name="q1" value="أيقونية ولسترة"> أيقونية ولسترة<br>
+  <input type="radio" name="q1" value="أثينا وروما"> أثينا وروما<br>
+  <input type="radio" name="q1" value="أفسس وأنطاكية"> أفسس وأنطاكية<br>
+</div>
+
+<div class="question">
+  <p>2. ما رد فعل الناس عندما رأوا الرجل الأعور يشفى؟</p>
+  <input type="radio" name="q2" value="ظنوه آلهة"> ظنوه آلهة<br>
+  <input type="radio" name="q2" value="فرحوا بصمت"> فرحوا بصمت<br>
+  <input type="radio" name="q2" value="غضبوا عليه"> غضبوا عليه<br>
+</div>
+
+<div class="question">
+  <p>3. ماذا فعل الرسل عندما حاول الناس عبادة البشر كآلهة؟</p>
+  <input type="radio" name="q3" value="مزقوا ثيابهم وحذروا الناس"> مزقوا ثيابهم وحذروا الناس<br>
+  <input type="radio" name="q3" value="قبلوا العبادة"> قبلوا العبادة<br>
+  <input type="radio" name="q3" value="هربوا من المدينة"> هربوا من المدينة<br>
+</div>
+
+<div class="question">
+  <p>4. ما الهدف من تأسيس الرسل للكنائس وتعيين القادة؟</p>
+  <input type="radio" name="q4" value="تعليم التلاميذ ودعم الإيمان"> تعليم التلاميذ ودعم الإيمان<br>
+  <input type="radio" name="q4" value="زيادة الثروة"> زيادة الثروة<br>
+  <input type="radio" name="q4" value="بناء مبانٍ"> بناء مبانٍ<br>
+</div>
+
+<div class="question">
+  <p>5. ماذا كان شعور الجماعة في أنطاكية عند سماع أخبار الإنجيل من الرسل؟</p>
+  <input type="radio" name="q5" value="فرحوا كثيرًا"> فرحوا كثيرًا<br>
+  <input type="radio" name="q5" value="حزنوا"> حزنوا<br>
+  <input type="radio" name="q5" value="غضبوا"> غضبوا<br>
+</div>
+
+<button class="submit-btn" onclick="checkAnswers()">تسليم الإجابات</button>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+  if(document.querySelector('input[name="q1"]:checked')?.value === "أيقونية ولسترة") score++;
+  if(document.querySelector('input[name="q2"]:checked')?.value === "ظنوه آلهة") score++;
+  if(document.querySelector('input[name="q3"]:checked')?.value === "مزقوا ثيابهم وحذروا الناس") score++;
+  if(document.querySelector('input[name="q4"]:checked')?.value === "تعليم التلاميذ ودعم الإيمان") score++;
+  if(document.querySelector('input[name="q5"]:checked')?.value === "فرحوا كثيرًا") score++;
+  alert("لقد حصلت على " + score + " من 5.");
+}
+</script>
+
+</body>
+</html>
