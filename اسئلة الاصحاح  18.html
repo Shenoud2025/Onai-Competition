@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أسئلة سفر أعمال الرسل - إصحاح 18</title>
+  <style>
+    body {
+      font-family: "Amiri", serif;
+      background: #f9f9f9;
+      margin: 40px;
+      line-height: 2;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    button {
+      background: #27ae60;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #219150;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+<h1>أسئلة سفر أعمال الرسل - إصحاح 18</h1>
+
+<form id="quiz">
+
+  <div class="question">
+    <p>1- مع من التقى بولس في كورنثوس وكانا يعملان في صناعة الخيام؟</p>
+    <label><input type="radio" name="q1" value="1"> بطرس ويوحنا</label><br>
+    <label><input type="radio" name="q1" value="2"> أكيلا وبرسكيلا</label><br>
+    <label><input type="radio" name="q1" value="3"> يعقوب واندراوس</label>
+  </div>
+
+  <div class="question">
+    <p>2- ماذا كان يفعل بولس كل يوم سبت في المجمع؟</p>
+    <label><input type="radio" name="q2" value="1"> يبيع الخيام</label><br>
+    <label><input type="radio" name="q2" value="2"> يكرز ويقنع اليهود واليونانيين</label><br>
+    <label><input type="radio" name="q2" value="3"> يدرس الفلسفة</label>
+  </div>
+
+  <div class="question">
+    <p>3- من هو رئيس المجمع الذي آمن بالرب هو وبيته؟</p>
+    <label><input type="radio" name="q3" value="1"> سوستانيس</label><br>
+    <label><input type="radio" name="q3" value="2"> كريسبس</label><br>
+    <label><input type="radio" name="q3" value="3"> غاليون</label>
+  </div>
+
+  <div class="question">
+    <p>4- ماذا قال الرب لبولس في الرؤيا وهو في كورنثوس؟</p>
+    <label><input type="radio" name="q4" value="1"> لا تخف، بل تكلم ولا تسكت</label><br>
+    <label><input type="radio" name="q4" value="2"> اصعد إلى أورشليم</label><br>
+    <label><input type="radio" name="q4" value="3"> اترك الخدمة</label>
+  </div>
+
+  <div class="question">
+    <p>5- من هو أبلوس الذي ظهر في هذا الإصحاح؟</p>
+    <label><input type="radio" name="q5" value="1"> رجل فصيح مقتدر في الكتب</label><br>
+    <label><input type="radio" name="q5" value="2"> قائد جيش روماني</label><br>
+    <label><input type="radio" name="q5" value="3"> كاهن وثني</label>
+  </div>
+
+  <button type="button" onclick="checkAnswers()">تسليم الامتحان</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+  const answers = {
+    q1: "2",
+    q2: "2",
+    q3: "2",
+    q4: "1",
+    q5: "1"
+  };
+
+  for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerText =
+    "درجتك: " + score + " من 5";
+}
+</script>
+
+</body>
+</html>
+<a href="الاصحاح 19 .html">التالي</a>

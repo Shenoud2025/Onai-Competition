@@ -2,164 +2,107 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>اختبار أعمال الرسل - الأصحاح الأول</title>
+  <title>اختبار أعمال الرسل - الإصحاح الأول</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
       padding: 20px;
       line-height: 1.8;
     }
-    .question {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
+    h1 {
+      text-align: center;
       color: #2c3e50;
     }
+    .question {
+      background: #fff;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #ccc;
+    }
     button {
-      background-color: #3498db;
-      color: white;
-      border: none;
+      display: block;
+      margin: 20px auto;
       padding: 10px 20px;
+      border: none;
+      background: #2c3e50;
+      color: #fff;
+      font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
     }
-    .result {
-      margin-top: 20px;
+    button:hover {
+      background: #4CAF50;
+    }
+    #result {
+      text-align: center;
       font-size: 18px;
       font-weight: bold;
+      margin-top: 20px;
       color: green;
     }
   </style>
 </head>
 <body>
 
-  <h2>📝 اختبار سفر أعمال الرسل – الأصحاح الأول</h2>
-  <form id="quizForm">
+<h1>اختبار أعمال الرسل - الإصحاح الأول</h1>
 
-    <div class="question">
-      <p>1. الكلام الأول أنشأته، المقصود به:</p>
-      <label><input type="radio" name="q1" value="ج"> إنجيل لوقا</label><br>
-      <label><input type="radio" name="q1" value="أ"> سفر التكوين</label><br>
-      <label><input type="radio" name="q1" value="ب"> إنجيل متى</label><br>
-      <label><input type="radio" name="q1" value="د"> رسالة رومية</label>
-    </div>
+<form id="quizForm">
 
-    <div class="question">
-      <p>2. نعرف من اسم المُرسَل إليه أن كاتب أعمال الرسل هو كاتب إنجيل:</p>
-      <label><input type="radio" name="q2" value="ج"> لوقا</label><br>
-      <label><input type="radio" name="q2" value="أ"> متى</label><br>
-      <label><input type="radio" name="q2" value="ب"> مرقس</label><br>
-      <label><input type="radio" name="q2" value="د"> يوحنا</label>
-    </div>
+  <div class="question">
+    <p>1- من كتب سفر أعمال الرسل؟</p>
+    <label><input type="radio" name="q1" value="wrong"> بولس الرسول</label><br>
+    <label><input type="radio" name="q1" value="correct"> لوقا البشير</label><br>
+    <label><input type="radio" name="q1" value="wrong"> بطرس الرسول</label><br>
+  </div>
 
-    <div class="question">
-      <p>3. معنى اسم "ثاؤفيليس":</p>
-      <label><input type="radio" name="q3" value="ب"> مُحب الإله</label><br>
-      <label><input type="radio" name="q3" value="أ"> حامل الإله</label><br>
-      <label><input type="radio" name="q3" value="ج"> المستنير</label><br>
-      <label><input type="radio" name="q3" value="د"> مُحب الحق</label>
-    </div>
+  <div class="question">
+    <p>2- كم يوم ظهر الرب لتلاميذه بعد قيامته؟</p>
+    <label><input type="radio" name="q2" value="wrong"> عشرة أيام</label><br>
+    <label><input type="radio" name="q2" value="correct"> أربعين يومًا</label><br>
+    <label><input type="radio" name="q2" value="wrong"> خمسين يومًا</label><br>
+  </div>
 
-    <div class="question">
-      <p>4. ظهر الرب لتلاميذه بعد قيامته لمدة:</p>
-      <label><input type="radio" name="q4" value="د"> كل ما سبق صحيح</label><br>
-      <label><input type="radio" name="q4" value="أ"> ليتأكدوا من قيامته</label><br>
-      <label><input type="radio" name="q4" value="ب"> ليتحدث عن الملكوت</label><br>
-      <label><input type="radio" name="q4" value="ج"> ليوصيهم بانتظار موعد الآب</label>
-    </div>
+  <div class="question">
+    <p>3- ما هي الوصية التي أوصى بها الرب تلاميذه قبل صعوده؟</p>
+    <label><input type="radio" name="q3" value="correct"> أن لا يبرحوا من أورشليم حتى ينالوا موعد الآب</label><br>
+    <label><input type="radio" name="q3" value="wrong"> أن يذهبوا فورًا إلى الجليل</label><br>
+    <label><input type="radio" name="q3" value="wrong"> أن يكتبوا الأناجيل</label><br>
+  </div>
 
-    <div class="question">
-      <p>5. المقصود بموعد الآب:</p>
-      <label><input type="radio" name="q5" value="د"> حلول الروح القدس وبدء الكرازة</label><br>
-      <label><input type="radio" name="q5" value="أ"> موعد عيد الخمسين اليهودي</label><br>
-      <label><input type="radio" name="q5" value="ب"> عودة الملك إلى إسرائيل</label><br>
-      <label><input type="radio" name="q5" value="ج"> خراب أورشليم</label>
-    </div>
+  <div class="question">
+    <p>4- بماذا يعتمد التلاميذ كما وعدهم المسيح؟</p>
+    <label><input type="radio" name="q4" value="wrong"> بماء</label><br>
+    <label><input type="radio" name="q4" value="correct"> بالروح القدس</label><br>
+    <label><input type="radio" name="q4" value="wrong"> بالدم</label><br>
+  </div>
 
-    <div class="question">
-      <p>6. صعد المسيح من على جبل:</p>
-      <label><input type="radio" name="q6" value="ب"> الزيتون</label><br>
-      <label><input type="radio" name="q6" value="أ"> أراراط</label><br>
-      <label><input type="radio" name="q6" value="ج"> موسى</label><br>
-      <label><input type="radio" name="q6" value="د"> المريا</label>
-    </div>
+  <div class="question">
+    <p>5- من الذي حل محل يهوذا الإسخريوطي بعد موته؟</p>
+    <label><input type="radio" name="q5" value="wrong"> برنابا</label><br>
+    <label><input type="radio" name="q5" value="wrong"> شاول</label><br>
+    <label><input type="radio" name="q5" value="correct"> متياس</label><br>
+  </div>
 
-    <div class="question">
-      <p>7. بعد الصعود، ظهر للتلاميذ:</p>
-      <label><input type="radio" name="q7" value="ب"> رجلان بلباس أبيض</label><br>
-      <label><input type="radio" name="q7" value="أ"> رجل بلباس أبيض</label><br>
-      <label><input type="radio" name="q7" value="ج"> رجل بلباس لامع</label><br>
-      <label><input type="radio" name="q7" value="د"> مجموعة من الجند</label>
-    </div>
+  <button type="button" onclick="checkAnswers()">إظهار النتيجة</button>
+</form>
 
-    <div class="question">
-      <p>8. ما عزّى التلاميذ هو أن الرب:</p>
-      <label><input type="radio" name="q8" value="د"> سيرجع</label><br>
-      <label><input type="radio" name="q8" value="أ"> سيصعد</label><br>
-      <label><input type="radio" name="q8" value="ب"> سيشهد</label><br>
-      <label><input type="radio" name="q8" value="ج"> سيسمع</label>
-    </div>
+<div id="result"></div>
 
-    <div class="question">
-      <p>9. أوصى المسيح تلاميذه بالبقاء في:</p>
-      <label><input type="radio" name="q9" value="د"> أورشليم</label><br>
-      <label><input type="radio" name="q9" value="أ"> اليهودية</label><br>
-      <label><input type="radio" name="q9" value="ب"> الجليل</label><br>
-      <label><input type="radio" name="q9" value="ج"> بيت عنيا</label>
-    </div>
-
-    <div class="question">
-      <p>10. لما سأل التلاميذ عن موعد الحدث، المسيح:</p>
-      <label><input type="radio" name="q10" value="ب"> أخبرهم بأن ليس هذا من حقهم</label><br>
-      <label><input type="radio" name="q10" value="أ"> صارحهم</label><br>
-      <label><input type="radio" name="q10" value="ج"> قال أن الروح القدس سيخبرهم</label><br>
-      <label><input type="radio" name="q10" value="د"> لم يجبهم</label>
-    </div>
-
-    <!-- يمكنك إضافة باقي الأسئلة بنفس الشكل -->
-
-    <button type="button" onclick="submitQuiz()">عرض النتيجة</button>
-  </form>
-
-  <div class="result" id="result"></div>
-
-  <script>
-    function submitQuiz() {
-      const correctAnswers = {
-        q1: "ج",
-        q2: "ج",
-        q3: "ب",
-        q4: "د",
-        q5: "د",
-        q6: "ب",
-        q7: "ب",
-        q8: "د",
-        q9: "د",
-        q10: "ب"
-      };
-
-      let score = 0;
-      let total = Object.keys(correctAnswers).length;
-
-      for (let i = 1; i <= total; i++) {
-        let answer = document.querySelector(`input[name="q${i}"]:checked`);
-        if (answer && answer.value === correctAnswers[`q${i}`]) {
-          score++;
-        }
-      }
-
-      document.getElementById("result").innerText = `✅ نتيجتك: ${score} من ${total}`;
-    }
-  </script>
+<script>
+  function checkAnswers() {
+    const form = document.getElementById('quizForm');
+    const answers = form.querySelectorAll('input[type=radio]:checked');
+    let score = 0;
+    answers.forEach(ans => {
+      if (ans.value === "correct") score++;
+    });
+    document.getElementById('result').innerText = 
+      "درجتك: " + score + " من 5";
+  }
+</script>
 
 </body>
 </html>
-<br><br> 
-<!-- هنا رابط ينقلك للصفحة الثانية -->
-  <a href="الاصحاح الثاني .html">انتقل إلى الصفحة الثانية</a> 
+<a href="الاصحاح الثاني .html">التالي</a>

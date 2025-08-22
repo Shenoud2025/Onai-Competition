@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اختبار أعمال الرسل - الإصحاح 25</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .question {
+      background-color: #fff;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .submit-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #4CAF50;
+    }
+    #result {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+<h1>اختبار أعمال الرسل - الإصحاح 25</h1>
+
+<form id="quizForm">
+  <div class="question">
+    <p>1. من تولى ولاية قيصرية بعد فيلكس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="a"> أ) أغريباس</label>
+      <label><input type="radio" name="q1" value="b"> ب) فستوس</label>
+      <label><input type="radio" name="q1" value="c"> ج) برنيكي</label>
+      <label><input type="radio" name="q1" value="d"> د) بطرس</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>2. لماذا أراد اليهود أن يُحاكم بولس في أورشليم؟</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="a"> أ) لأنه خالف روما</label>
+      <label><input type="radio" name="q2" value="b"> ب) لأنه زعموا أنه خالف ناموسهم وأهان الهيكل</label>
+      <label><input type="radio" name="q2" value="c"> ج) لأنه هرب من المدينة</label>
+      <label><input type="radio" name="q2" value="d"> د) لأنه تاجر</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>3. ما الذي كان اليهود يخططون لفعله أثناء نقل بولس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="a"> أ) قتله</label>
+      <label><input type="radio" name="q3" value="b"> ب) إطلاق سراحه</label>
+      <label><input type="radio" name="q3" value="c"> ج) ترقيته</label>
+      <label><input type="radio" name="q3" value="d"> د) سجنه أكثر</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>4. ما حق بولس الذي استخدمه أمام فستوس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="a"> أ) الحق في الهروب</label>
+      <label><input type="radio" name="q4" value="b"> ب) الحق في محاكمة عادلة أمام قيصر</label>
+      <label><input type="radio" name="q4" value="c"> ج) الحق في الهجرة</label>
+      <label><input type="radio" name="q4" value="d"> د) الحق في الشهادة أمام الهيكل</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>5. ماذا قرر فستوس بعد سماع بولس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q5" value="a"> أ) إعدامه فورًا</label>
+      <label><input type="radio" name="q5" value="b"> ب) إطلاق سراحه في قيصرية</label>
+      <label><input type="radio" name="q5" value="c"> ج) إرساله إلى قيصر في روما</label>
+      <label><input type="radio" name="q5" value="d"> د) سجنه في أورشليم</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>6. من حضر مع أغريباس لمقابلة فستوس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q6" value="a"> أ) بطرس</label>
+      <label><input type="radio" name="q6" value="b"> ب) برنيكي</label>
+      <label><input type="radio" name="q6" value="c"> ج) بولس</label>
+      <label><input type="radio" name="q6" value="d"> د) فيلكس</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>7. ما الهدف من عرض قضية بولس على أغريباس وبرنيكي؟</p>
+    <div class="options">
+      <label><input type="radio" name="q7" value="a"> أ) الحكم عليه بالإعدام</label>
+      <label><input type="radio" name="q7" value="b"> ب) فحص التهم ومراجعة القضية قبل إرسالها إلى قيصر</label>
+      <label><input type="radio" name="q7" value="c"> ج) إطلاق سراحه</label>
+      <label><input type="radio" name="q7" value="d"> د) تغيير دينه</label>
+    </div>
+  </div>
+
+  <button type="button" class="submit-btn" onclick="checkAnswers()">عرض النتيجة</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+function checkAnswers() {
+  const answers = {q1:'b', q2:'b', q3:'a', q4:'b', q5:'c', q6:'b', q7:'b'};
+  let score = 0;
+  for (let i = 1; i <= 7; i++) {
+    const q = document.querySelector(`input[name=q${i}]:checked`);
+    if(q && q.value === answers['q'+i]) score++;
+  }
+  document.getElementById('result').textContent = `لقد حصلت على ${score} من 7`;
+}
+</script>
+
+</body>
+</html>
+<a href="الاصحاح 26.html">التالي</a>

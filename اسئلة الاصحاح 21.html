@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مسابقة أعمال الرسل - الإصحاح 21</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      direction: rtl;
+      text-align: right;
+      padding: 30px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    .question {
+      margin-top: 20px;
+    }
+    .options {
+      margin-top: 10px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>مسابقة الإصحاح الحادي والعشرين</h1>
+
+  <!-- السؤال 1 -->
+  <div class="question">
+    <p>1. من أي مدينة كان بولس قبل أن يسافر إلى أورشليم؟</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="a"> صور</label>
+      <label><input type="radio" name="q1" value="b"> أنطاكية</label>
+      <label><input type="radio" name="q1" value="c"> قيصرية</label>
+      <label><input type="radio" name="q1" value="d"> أورشليم</label>
+    </div>
+  </div>
+
+  <!-- السؤال 2 -->
+  <div class="question">
+    <p>2. لماذا حذرته الجماعات في صور من الصعود إلى أورشليم؟</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="a"> خوفاً على سلامته</label>
+      <label><input type="radio" name="q2" value="b"> لأنه سيُعتقل</label>
+      <label><input type="radio" name="q2" value="c"> لأنه سيخسر أموالاً</label>
+      <label><input type="radio" name="q2" value="d"> لأنه لن يستطيع التحدث بالآرامية</label>
+    </div>
+  </div>
+
+  <!-- السؤال 3 -->
+  <div class="question">
+    <p>3. أين حاول بعض اليهود الغاضبين قتل بولس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="a"> داخل الهيكل</label>
+      <label><input type="radio" name="q3" value="b"> في الشوارع</label>
+      <label><input type="radio" name="q3" value="c"> عند بيته</label>
+      <label><input type="radio" name="q3" value="d"> عند ميناء صور</label>
+    </div>
+  </div>
+
+  <!-- السؤال 4 -->
+  <div class="question">
+    <p>4. من تدخل لحماية بولس عند محاولة القتل؟</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="a"> قائد المئة والجنود</label>
+      <label><input type="radio" name="q4" value="b"> الرسل فقط</label>
+      <label><input type="radio" name="q4" value="c"> أهل المدينة</label>
+      <label><input type="radio" name="q4" value="d"> الحشد اليهودي</label>
+    </div>
+  </div>
+
+  <button onclick="checkAnswers()">تسليم الإجابات</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+  const answers = {q1: 'a', q2: 'a', q3: 'a', q4: 'a'};
+  
+  for (let q in answers) {
+    const selected = document.querySelector('input[name="'+q+'"]:checked');
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+  document.getElementById('result').innerText = 'درجتك: ' + score + ' من 4';
+}
+</script>
+
+</body>
+</html>
+<a href="الاصحاح22.html">التالي </a>

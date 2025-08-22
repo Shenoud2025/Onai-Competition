@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مسابقة أعمال الرسل - الإصحاح 24</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 30px;
+      line-height: 1.8;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    .question {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+<h1>مسابقة سفر أعمال الرسل - الإصحاح 24</h1>
+
+<form id="quizForm">
+  <div class="question">
+    <p>1. من قدم الشكوى ضد بولس أمام الوالي؟</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="a"> رئيس اليهود أنانيا مع بعض الشيوخ</label>
+      <label><input type="radio" name="q1" value="b"> قائد المئة</label>
+      <label><input type="radio" name="q1" value="c"> أحد الفريسيين فقط</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>2. ما التهم الموجهة لبولس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="a"> خرق الناموس والهيكل</label>
+      <label><input type="radio" name="q2" value="b"> سرقة أموال</label>
+      <label><input type="radio" name="q2" value="c"> الهروب من المدينة</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>3. كيف رد بولس على الاتهامات؟</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="a"> اعترف بخطئه</label>
+      <label><input type="radio" name="q3" value="b"> نفى كل التهم وأكد رجاء القيامة</label>
+      <label><input type="radio" name="q3" value="c"> لم يرد على الإطلاق</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>4. ماذا لاحظ الوالي عن المؤامرة؟</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="a"> أنها حقيقية فقرر تأجيل القرار</label>
+      <label><input type="radio" name="q4" value="b"> أنها غير موجودة</label>
+      <label><input type="radio" name="q4" value="c"> أنها بسيطة ولا تحتاج تدخل</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>5. ما الدرس الروحي من هذا الإصحاح؟</p>
+    <div class="options">
+      <label><input type="radio" name="q5" value="a"> القوة العسكرية ضرورية لحماية النفس</label>
+      <label><input type="radio" name="q5" value="b"> الصبر والثبات في الإيمان أمام الظلم</label>
+      <label><input type="radio" name="q5" value="c"> تجنب جميع الناس لتجنب المشاكل</label>
+    </div>
+  </div>
+
+  <button type="button" onclick="checkAnswers()">تسليم الإجابات</button>
+
+  <div class="result" id="result"></div>
+</form>
+
+<script>
+function checkAnswers() {
+  const answers = { q1: "a", q2: "a", q3: "b", q4: "a", q5: "b" };
+  let score = 0;
+  for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+  document.getElementById("result").innerText = `لقد حصلت على ${score} من 5`;
+}
+</script>
+
+</body>
+</html>
+<a href="الاصحاح 25.html">التالي</a>

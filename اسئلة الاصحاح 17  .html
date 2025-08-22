@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اختبار أعمال الرسل - إصحاح 17</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 20px;
+      line-height: 1.8;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    .question {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    button {
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      margin: 20px auto;
+    }
+    button:hover {
+      background: #219150;
+    }
+    #result {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>امتحان أعمال الرسل - إصحاح 17</h1>
+
+<form id="quizForm">
+
+  <div class="question">
+    <p>1- أين بشر بولس أولاً في تسالونيكي؟</p>
+    <div class="options">
+      <label><input type="radio" name="q1" value="صح"> في مجمع اليهود</label>
+      <label><input type="radio" name="q1" value="خطأ"> في السوق</label>
+      <label><input type="radio" name="q1" value="خطأ"> في ساحة القضاء</label>
+      <label><input type="radio" name="q1" value="خطأ"> في بيوت الأصدقاء</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>2- كم سبت كان بولس يحاجج اليهود من الكتب في تسالونيكي؟</p>
+    <div class="options">
+      <label><input type="radio" name="q2" value="خطأ"> خمسة</label>
+      <label><input type="radio" name="q2" value="خطأ"> أربعة</label>
+      <label><input type="radio" name="q2" value="صح"> ثلاثة</label>
+      <label><input type="radio" name="q2" value="خطأ"> سبعة</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>3- ماذا كان يمتاز به أهل بيرية عن أهل تسالونيكي؟</p>
+    <div class="options">
+      <label><input type="radio" name="q3" value="خطأ"> كانوا أغنياء</label>
+      <label><input type="radio" name="q3" value="صح"> كانوا أنبل وفحصوا الكتب يوميًا</label>
+      <label><input type="radio" name="q3" value="خطأ"> كانوا أكثر عددًا</label>
+      <label><input type="radio" name="q3" value="خطأ"> كانوا محاربين أشداء</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>4- ماذا رأى بولس في أثينا فاغتاظ؟</p>
+    <div class="options">
+      <label><input type="radio" name="q4" value="صح"> المدينة مملوءة أصنامًا</label>
+      <label><input type="radio" name="q4" value="خطأ"> المدينة مدمرة</label>
+      <label><input type="radio" name="q4" value="خطأ"> المدينة بدون هيكل</label>
+      <label><input type="radio" name="q4" value="خطأ"> المدينة كلها يهود</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>5- كيف وصف الأثينيون بولس عندما كرز بينهم؟</p>
+    <div class="options">
+      <label><input type="radio" name="q5" value="خطأ"> رجل مجنون</label>
+      <label><input type="radio" name="q5" value="خطأ"> نذير شؤم</label>
+      <label><input type="radio" name="q5" value="صح"> مهذر</label>
+      <label><input type="radio" name="q5" value="خطأ"> ساحر</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>6- ماذا وجد بولس مذبحًا مكتوبًا عليه في أثينا؟</p>
+    <div class="options">
+      <label><input type="radio" name="q6" value="خطأ"> للإله زيوس</label>
+      <label><input type="radio" name="q6" value="صح"> لإله مجهول</label>
+      <label><input type="radio" name="q6" value="خطأ"> للإله أبوللو</label>
+      <label><input type="radio" name="q6" value="خطأ"> للإله ديونيسيوس</label>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>7- من هو الفيلسوف الذي آمن بعدما سمع بولس في أريوس باغوس؟</p>
+    <div class="options">
+      <label><input type="radio" name="q7" value="خطأ"> أفلاطون</label>
+      <label><input type="radio" name="q7" value="صح"> ديونيسيوس الأريوباغي</label>
+      <label><input type="radio" name="q7" value="خطأ"> أبيقور</label>
+      <label><input type="radio" name="q7" value="خطأ"> هيراقليطس</label>
+    </div>
+  </div>
+
+  <button type="button" onclick="calculateScore()">تسليم الامتحان</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  function calculateScore() {
+    let score = 0;
+    const answers = document.querySelectorAll('input[type="radio"]:checked');
+    answers.forEach(ans => {
+      if (ans.value === "صح") score++;
+    });
+    document.getElementById('result').innerText = "درجتك: " + score + " من 7";
+  }
+</script>
+<a href="الاصحاح 18 .html">التالي</a>
+</body>
+</html>
