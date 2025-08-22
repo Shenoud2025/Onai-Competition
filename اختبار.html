@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اختبار سفر أعمال الرسل - 50 سؤال</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      text-align: right;
+    }
+    h1 {
+      color: #28dd40;
+    }
+    .question {
+      background: #fff;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(25, 226, 136, 0.1);
+    }
+    .answers label {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #28a745;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>اختبار سفر أعمال الرسل - 50 سؤال</h1>
+
+  <div id="quiz"></div>
+
+  <button onclick="submitQuiz()">تسليم الاختبار</button>
+
+  <div id="result"></div>
+
+  <script>
+    const questions = [
+      {question: "في أي إصحاح نزل الروح القدس على الرسل؟", answers:["أعمال 1","أعمال 2","أعمال 3","أعمال 4"], correct:"أعمال 2"},
+      {question: "من أسلم في بيت كورنيليوس؟", answers:["بطرس","بولس","مرقس","يوحنا"], correct:"بطرس"},
+      {question: "من كتب معظم الرسائل؟", answers:["بطرس","بولس","يوحنا","متى"], correct:"بولس"},
+      {question: "أين كان فيلبس يبشر بعد حلول الروح القدس؟", answers:["أورشليم","السامرة","أنطاكية","روما"], correct:"السامرة"},
+      {question: "أين شفى بطرس المولود أعسر؟", answers:["أعمال 2","أعمال 3","أعمال 5","أعمال 7"], correct:"أعمال 3"},
+      {question: "من أخبر عن رؤية عيلياء؟", answers:["بطرس","بولا","فيليب","يهوذا"], correct:"فيليب"},
+      {question: "من أرشد بطرس لبيت كورنيليوس؟", answers:["الملك","الملاك","الروح القدس","بولس"], correct:"الملاك"},
+      {question: "أين أُسلم العشرات بعد خطبة بطرس؟", answers:["أورشليم","السامرة","بيت لحم","جليلي"], correct:"أورشليم"},
+      {question: "من كان الملك الذي قتل يعقوب؟", answers:["هرودس","أوكتافيوس","بيلاطس","بيتر"], correct:"هرودس"},
+      {question: "من كان الشاب الذي سقط من الشرفة؟", answers:["أبولس","أمين","يوحنا","أحيم"], correct:"أمين"},
+      {question: "أين أرسل بولس إلى روما؟", answers:["أورشليم","روما","أنطاكية","فيليبي"], correct:"روما"},
+      {question: "من رافق بولس في رحلته؟", answers:["مرقس","برنابا","يوحنا","بطرس"], correct:"برنابا"},
+      {question: "من ألقى الخطبة في عيد الخمسين؟", answers:["بطرس","بولس","فيليب","يوحنا"], correct:"بطرس"},
+      {question: "أين أُرسل ستيفانوس ليبشر؟", answers:["أورشليم","السامرة","روما","أفريقية"], correct:"أورشليم"},
+      {question: "من أُلقي بالسجن مع بطرس؟", answers:["يوحنا","بولس","ستيفانوس","مرقس"], correct:"يوحنا"},
+      {question: "من ألقى القبض على بولس؟", answers:["اليهود","الرومان","الأنباط","السامريون"], correct:"اليهود"},
+      {question: "من ساعد في إقناع بطرس بالمجيء إلى كورنيليوس؟", answers:["الروح القدس","الملائكة","فيليب","ستيفانوس"], correct:"الروح القدس"},
+      {question: "من تبع بولس في رحلاته الثانية؟", answers:["سيلس","برنابا","مرقس","يوحنا"], correct:"سيلس"},
+      {question: "من كان رسول الأمم؟", answers:["بطرس","بولس","يوحنا","فيليب"], correct:"بولس"},
+      {question: "أين أُلقي ستيفانوس؟", answers:["في السامرة","في أورشليم","في روما","في أنطاكية"], correct:"في أورشليم"},
+      {question: "من شفى أبرصًا في دمشق؟", answers:["بطرس","بولس","فيليب","يوحنا"], correct:"بولس"},
+      {question: "من كان أول شهيد مسيحي؟", answers:["ستيفانوس","بطرس","بولس","يوحنا"], correct:"ستيفانوس"},
+      {question: "أين التقى بولس مع بطرس لأول مرة؟", answers:["أورشليم","روما","السامرة","أنطاكية"], correct:"أورشليم"},
+      {question: "من أجرى شفاء على باب الهيكل؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بطرس"},
+      {question: "من كتب إلى الرسل بعد حل الروح القدس؟", answers:["بطرس","بولس","يوحنا","يعقوب"], correct:"بطرس"},
+      {question: "من رافق بولس إلى مالطا؟", answers:["سيافون","سيلس","برنابا","مرقس"], correct:"سيلس"},
+      {question: "أين أُرسلت الكنيسة الأولى؟", answers:["أورشليم","السامرة","روما","اليونان"], correct:"أورشليم"},
+      {question: "من ألقى الخطبة بعد قيامة المسيح؟", answers:["بطرس","بولس","ستيفانوس","يوحنا"], correct:"بطرس"},
+      {question: "من حوّل فيلبس إلى السامرة؟", answers:["الملاك","الروح القدس","بطرس","بولس"], correct:"الروح القدس"},
+      {question: "من كتب معظم الرسائل إلى الكنائس؟", answers:["بطرس","بولس","يوحنا","يعقوب"], correct:"بولس"},
+      {question: "من أجرى شفاء في أنطاكية؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بولس"},
+      {question: "من ألقى القبض على ستيفانوس؟", answers:["اليهود","الرومان","الملائكة","السامريون"], correct:"اليهود"},
+      {question: "من أسلم في فيلبي؟", answers:["لوكية","ليديا","ساريا","ديونيسيوس"], correct:"ليديا"},
+      {question: "من شفى عبد السيد؟", answers:["بطرس","بولس","يوحنا","ستيفانوس"], correct:"بولس"},
+      {question: "من تنبأ عن سفر بولس إلى روما؟", answers:["الملائكة","بطرس","فيليب","ستيفانوس"], correct:"الملائكة"},
+      {question: "من حاول إيقاف رسالة الرسل؟", answers:["اليهود","الرومان","الأنباط","الملائكة"], correct:"اليهود"},
+      {question: "من أرسل بولس رسالة إلى كورنثوس؟", answers:["بولس","بطرس","يوحنا","مرقس"], correct:"بولس"},
+      {question: "أين اجتمع الرسل بعد قيامة المسيح؟", answers:["أورشليم","روما","السامرة","اليونان"], correct:"أورشليم"},
+      {question: "من أرشد بولس في رحلته إلى أثينا؟", answers:["الروح القدس","الملائكة","بطرس","ستيفانوس"], correct:"الروح القدس"},
+      {question: "من شفى العرج أمام الهيكل؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بطرس"},
+      {question: "من كتب رسالة إلى أفسس؟", answers:["بولس","بطرس","يوحنا","ستيفانوس"], correct:"بولس"},
+      {question: "أين التقى بولس مع لوقا؟", answers:["أورشليم","روما","السامرة","أنتاكية"], correct:"أورشليم"},
+      {question: "من ساعد بطرس في السجن؟", answers:["الملاك","بولس","ستيفانوس","فيليب"], correct:"الملاك"},
+      {question: "أين كانت رسالة بولس إلى رومية؟", answers:["روما","أورشليم","السامرة","فيليبي"], correct:"روما"},
+      {question: "من تنبأ عن قيامة المسيح؟", answers:["ملاك","ستيفانوس","بطرس","يوحنا"], correct:"ملاك"},
+      {question: "أين أُقيمت الكنيسة الأولى؟", answers:["أورشليم","روما","السامرة","أنطاكية"], correct:"أورشليم"},
+      {question: "من أجرى شفاء في أورشليم بعد صعود المسيح؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بطرس"},
+      {question: "من كان الملك الذي حاكم بولس؟", answers:["أغريباس","هرودس","بيلاطس","نيرون"], correct:"أغريباس"},
+      {question: "من ألقى القبض على بطرس في عيد الفصح؟", answers:["اليهود","الرومان","الملائكة","ستيفانوس"], correct:"اليهود"},
+      {question: "أين بدأ بولس رحلته الأولى؟", answers:["أنطاكية","أورشليم","روما","السامرة"], correct:"أنطاكية"},
+      {question: "من ساعد في تعليم الرسل؟", answers:["بطرس","بولس","يوحنا","ستيفانوس"], correct:"بطرس"},
+      {question: "من أسلم أول الوثنيين؟", answers:["بطرس","بولس","فيليب","يوحنا"], correct:"بطرس"}
+    ];
+
+    const quizContainer = document.getElementById("quiz");
+
+    questions.forEach((q,index)=>{
+      const qDiv = document.createElement("div");
+      qDiv.classList.add("question");
+
+      const qTitle = document.createElement("p");
+      qTitle.textContent = (index+1)+". "+q.question;
+      qDiv.appendChild(qTitle);
+
+      const answersDiv = document.createElement("div");
+      answersDiv.classList.add("answers");
+
+      q.answers.forEach(ans=>{
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        input.type="radio";
+        input.name="question"+index;
+        input.value=ans;
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(ans));
+        answersDiv.appendChild(label);
+      });
+
+      qDiv.appendChild(answersDiv);
+      quizContainer.appendChild(qDiv);
+    });
+
+    function submitQuiz(){
+      let score=0;
+      questions.forEach((q,index)=>{
+        const selected = document.querySelector('input[name="question'+index+'"]:checked');
+        if(selected && selected.value===q.correct) score++;
+      });
+      document.getElementById("result").textContent = `لقد حصلت على ${score} من ${questions.length}`;
+    }
+  </script>
+</body>
+</html>

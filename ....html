@@ -1,100 +1,18 @@
-تجاوز إلى المحتوى
-أنت قلت:
-عاوز كود هتمل لسوبر ماركت
-قال ChatGPT:
-ممكن توضّحلي شوية أكتر قصدك إيه بكلمة "كود هتمل لسوبر ماركت"؟ 👀
-
-هل تقصد صفحة موقع ويب (HTML + CSS) بسيطة تعرض منتجات السوبر ماركت بالأسعار والصور؟
-
-ولا عايزها تكون تفاعلية (زي سلة مشتريات / إضافة للكارْت)؟
-
-ولا مجرد واجهة تعريفية للسوبر ماركت (اسم + صور + بيانات تواصل)؟
-
-لو قصدك صفحة ويب بسيطة للعرض، أقدر أبدأ لك بكود HTML+CSS جاهز، زي كده:
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>سوبر ماركت البركة</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-    .product {
-      background: #fff;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .product img {
-      max-width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-    }
-    .product p {
-      color: #27ae60;
-      font-weight: bold;
-    }
-    footer {
-      background: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+  <title>تشغيل صوت</title>
 </head>
 <body>
+  <h2>تشغيل الجملة صوتياً</h2>
+  
+  <!-- مشغل صوت -->
+  <audio controls>
+    <source src="hhh.mp4" type="audio/mpeg">
+    متصفحك لا يدعم عنصر الصوت.
+  </audio>
 
-  <header>
-    <h1>سوبر ماركت البركة</h1>
-    <p>أفضل المنتجات بأرخص الأسعار</p>
-  </header>
-
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="منتج 1">
-      <h3>أرز مصري 5 كجم</h3>
-      <p>150 جنيه</p>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="منتج 2">
-      <h3>زيت دوار الشمس 1 لتر</h3>
-      <p>70 جنيه</p>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="منتج 3">
-      <h3>سكر أبيض 1 كجم</h3>
-      <p>40 جنيه</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>جميع الحقوق محفوظة &copy; 2025 - سوبر ماركت البركة</p>
-  </footer>
-
+  <p>الجملة: "Yowza, that’s a lot of files. Try uploading fewer than 100 at a time."</p>
 </body>
 </html>
