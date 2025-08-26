@@ -1,150 +1,599 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>اختبار سفر أعمال الرسل - 50 سؤال</title>
+  <title>امتحان سفر أعمال الرسل (1–21)</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 20px;
-      text-align: right;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
     h1 {
-      color: #28dd40;
+      text-align: center;
+      color: #2575fc;
     }
     .question {
-      background: #fff;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(25, 226, 136, 0.1);
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
-    .answers label {
+    .question h3 {
+      margin-bottom: 15px;
+    }
+    .options label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid transparent;
       cursor: pointer;
+      transition: 0.3s;
+    }
+    .options input {
+      margin-left: 10px;
+    }
+    .options label:hover {
+      border: 2px solid #2575fc;
+      background: #f0f8ff;
     }
     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      background: #28a745;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #218838;
-    }
-    #result {
-      margin-top: 20px;
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
       font-size: 18px;
       font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background: #2575fc;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #6a11cb;
+    }
+    .result {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #6a11cb;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>اختبار سفر أعمال الرسل - 50 سؤال</h1>
 
-  <div id="quiz"></div>
+  <div class="container">
+    <h1>امتحان سفر أعمال الرسل (إصحاحات 1–21)</h1>
 
-  <button onclick="submitQuiz()">تسليم الاختبار</button>
+    <!-- من س1 إلى س25 -->
+    <div class="question">
+      <h3>س1: من الذي صعد إلى السماء أمام أعين التلاميذ؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="correct"> يسوع المسيح</label>
+        <label><input type="radio" name="q1" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q1" value="wrong"> يوحنا</label>
+        <label><input type="radio" name="q1" value="wrong"> استفانوس</label>
+      </div>
+    </div>
 
-  <div id="result"></div>
+    <div class="question">
+      <h3>س2: ما اسم الرجل الذي اختير بدل يهوذا؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="wrong"> سمعان</label>
+        <label><input type="radio" name="q2" value="wrong"> برنابا</label>
+        <label><input type="radio" name="q2" value="correct"> متياس</label>
+        <label><input type="radio" name="q2" value="wrong"> يعقوب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س3: في يوم الخمسين امتلأ الجميع من؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q3" value="wrong"> الإيمان</label>
+        <label><input type="radio" name="q3" value="correct"> الروح القدس</label>
+        <label><input type="radio" name="q3" value="wrong"> الرجاء</label>
+        <label><input type="radio" name="q3" value="wrong"> المحبة</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س4: من الذي شفى الأعرج عند باب الهيكل الجميل؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q4" value="correct"> بطرس ويوحنا</label>
+        <label><input type="radio" name="q4" value="wrong"> بولس وسيلا</label>
+        <label><input type="radio" name="q4" value="wrong"> برنابا ومتياس</label>
+        <label><input type="radio" name="q4" value="wrong"> استفانوس وفيلبس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س5: من الذي مات لأنه كذب على الروح القدس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q5" value="wrong"> هيرودس</label>
+        <label><input type="radio" name="q5" value="correct"> حنانيا</label>
+        <label><input type="radio" name="q5" value="wrong"> سمعان الساحر</label>
+        <label><input type="radio" name="q5" value="wrong"> يهوذا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س6: من الذي شاركت زوجها الكذب فسقطت وماتت؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q6" value="correct"> سفيرة</label>
+        <label><input type="radio" name="q6" value="wrong"> دروسلا</label>
+        <label><input type="radio" name="q6" value="wrong"> بريسكيلا</label>
+        <label><input type="radio" name="q6" value="wrong"> ليديا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س7: من أول شهيد في الكنيسة؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q7" value="wrong"> يعقوب</label>
+        <label><input type="radio" name="q7" value="correct"> استفانوس</label>
+        <label><input type="radio" name="q7" value="wrong"> يوحنا</label>
+        <label><input type="radio" name="q7" value="wrong"> بولس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س8: من كان راعيًا للثياب عند رجم استفانوس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q8" value="correct"> شاول</label>
+        <label><input type="radio" name="q8" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q8" value="wrong"> برنابا</label>
+        <label><input type="radio" name="q8" value="wrong"> يعقوب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س9: من الذي بشّر الخصي الحبشي؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q9" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q9" value="correct"> فيلبس</label>
+        <label><input type="radio" name="q9" value="wrong"> برنابا</label>
+        <label><input type="radio" name="q9" value="wrong"> يعقوب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س10: من الذي ظهر له المسيح في الطريق إلى دمشق؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q10" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q10" value="wrong"> يوحنا</label>
+        <label><input type="radio" name="q10" value="correct"> شاول</label>
+        <label><input type="radio" name="q10" value="wrong"> يعقوب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س11: من هو الرجل الذي أعاد له بطرس الحياة بعد أن ماتت؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q11" value="wrong"> دروسلا</label>
+        <label><input type="radio" name="q11" value="correct"> طابيثا (غزالة)</label>
+        <label><input type="radio" name="q11" value="wrong"> سفيرة</label>
+        <label><input type="radio" name="q11" value="wrong"> ليديا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س12: أين دُعي التلاميذ مسيحيين أول مرة؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q12" value="wrong"> أورشليم</label>
+        <label><input type="radio" name="q12" value="correct"> أنطاكية</label>
+        <label><input type="radio" name="q12" value="wrong"> رومية</label>
+        <label><input type="radio" name="q12" value="wrong"> أفسس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س13: من الذي قتل يعقوب أخا يوحنا بالسيف؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q13" value="wrong"> بيلاطس</label>
+        <label><input type="radio" name="q13" value="correct"> هيرودس</label>
+        <label><input type="radio" name="q13" value="wrong"> كلوديوس</label>
+        <label><input type="radio" name="q13" value="wrong"> فيلكس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س14: من الذي خرج من السجن بمعجزة بعدما كان مربوطاً بسلاسل؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q14" value="wrong"> بولس</label>
+        <label><input type="radio" name="q14" value="correct"> بطرس</label>
+        <label><input type="radio" name="q14" value="wrong"> استفانوس</label>
+        <label><input type="radio" name="q14" value="wrong"> برنابا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س15: من الذي ضربه ملاك الرب فمات لأنه لم يعطِ المجد لله؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q15" value="wrong"> فيلكس</label>
+        <label><input type="radio" name="q15" value="wrong"> أغريباس</label>
+        <label><input type="radio" name="q15" value="correct"> هيرودس</label>
+        <label><input type="radio" name="q15" value="wrong"> بيلاطس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س16: من الذي أرسله الروح القدس مع برنابا للتبشير؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q16" value="wrong"> يوحنا</label>
+        <label><input type="radio" name="q16" value="correct"> شاول (بولس)</label>
+        <label><input type="radio" name="q16" value="wrong"> متياس</label>
+        <label><input type="radio" name="q16" value="wrong"> فيلبس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س17: من الذي آمن لما رأى بولس يضرب الساحر عليم؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q17" value="wrong"> فيلكس</label>
+        <label><input type="radio" name="q17" value="wrong"> أغريباس</label>
+        <label><input type="radio" name="q17" value="correct"> سرجيوس بولس</label>
+        <label><input type="radio" name="q17" value="wrong"> كرنيليوس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س18: من الذي كان شريك بولس في الرحلة الأولى؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q18" value="wrong"> سيلا</label>
+        <label><input type="radio" name="q18" value="wrong"> لوقا</label>
+        <label><input type="radio" name="q18" value="correct"> برنابا</label>
+        <label><input type="radio" name="q18" value="wrong"> تيطس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س19: من الذي رجموه في لسترة حتى ظنوا أنه مات؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q19" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q19" value="correct"> بولس</label>
+        <label><input type="radio" name="q19" value="wrong"> برنابا</label>
+        <label><input type="radio" name="q19" value="wrong"> لوقا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س20: من الذي حدث خلاف شديد بينه وبين بولس في بداية الرحلة الثانية؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q20" value="wrong"> سيلا</label>
+        <label><input type="radio" name="q20" value="wrong"> لوقا</label>
+        <label><input type="radio" name="q20" value="correct"> برنابا</label>
+        <label><input type="radio" name="q20" value="wrong"> بطرس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س21: من هو التلميذ الذي أخذه بولس بدلاً من مرقس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q21" value="wrong"> لوقا</label>
+        <label><input type="radio" name="q21" value="wrong"> تيطس</label>
+        <label><input type="radio" name="q21" value="correct"> تيموثاوس</label>
+        <label><input type="radio" name="q21" value="wrong"> أبلوس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س22: ما اسم المرأة التي آمنت في فيلبي وكانت بياعة أرجوان؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q22" value="wrong"> دروسلا</label>
+        <label><input type="radio" name="q22" value="correct"> ليديا</label>
+        <label><input type="radio" name="q22" value="wrong"> سفيرة</label>
+        <label><input type="radio" name="q22" value="wrong"> بريسكيلا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س23: ماذا حدث لبولس وسيلا عندما كانا في السجن يصلّيان؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q23" value="wrong"> غرق السجن</label>
+        <label><input type="radio" name="q23" value="correct"> حدثت زلزلة وانفتحت الأبواب</label>
+        <label><input type="radio" name="q23" value="wrong"> هرب السجّان</label>
+        <label><input type="radio" name="q23" value="wrong"> أُعدم السجّان</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س24: ماذا فعل السجان بعد أن رأى الزلزلة وسمع بولس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q24" value="wrong"> انتحر</label>
+        <label><input type="radio" name="q24" value="correct"> آمن واعتمد هو وأهل بيته</label>
+        <label><input type="radio" name="q24" value="wrong"> طرد بولس</label>
+        <label><input type="radio" name="q24" value="wrong"> ضرب سيلا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س25: في أي مدينة رأى بولس تمثال للإله "إله مجهول"؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q25" value="wrong"> أفسس</label>
+        <label><input type="radio" name="q25" value="wrong"> فيلبي</label>
+        <label><input type="radio" name="q25" value="correct"> أثينا</label>
+        <label><input type="radio" name="q25" value="wrong"> كورنثوس</label>
+      </div>
+    </div>
+    <div class="question">
+      <h3>س26: من الذي كان يصنع الخيام مع بولس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q26" value="wrong"> لوقا</label>
+        <label><input type="radio" name="q26" value="wrong"> تيطس</label>
+        <label><input type="radio" name="q26" value="correct"> أكيلا</label>
+        <label><input type="radio" name="q26" value="wrong"> مرقس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س27: ما اسم زوجة أكيلا التي ساعدت في الخدمة؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q27" value="wrong"> دروسلا</label>
+        <label><input type="radio" name="q27" value="wrong"> ليديا</label>
+        <label><input type="radio" name="q27" value="correct"> بريسكيلا</label>
+        <label><input type="radio" name="q27" value="wrong"> سفيرة</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س28: من هو الخطيب المقتدر في الكتب الذي بشر في أفسس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q28" value="wrong"> تيطس</label>
+        <label><input type="radio" name="q28" value="wrong"> تيموثاوس</label>
+        <label><input type="radio" name="q28" value="correct"> أبلوس</label>
+        <label><input type="radio" name="q28" value="wrong"> لوقا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س29: ماذا حدث في أفسس لما بشر بولس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q29" value="wrong"> أقام موتى</label>
+        <label><input type="radio" name="q29" value="correct"> حدث شغب بسبب أرطاميس</label>
+        <label><input type="radio" name="q29" value="wrong"> هاجمهم اليهود</label>
+        <label><input type="radio" name="q29" value="wrong"> انهار السجن</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س30: من الذي سقط من النافذة وهو يسمع عظة بولس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q30" value="wrong"> تيطس</label>
+        <label><input type="radio" name="q30" value="wrong"> تيموثاوس</label>
+        <label><input type="radio" name="q30" value="correct"> أفتيخوس</label>
+        <label><input type="radio" name="q30" value="wrong"> أبلوس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س31: ماذا فعل بولس لأفتيخوس بعد سقوطه؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q31" value="wrong"> دفنه</label>
+        <label><input type="radio" name="q31" value="wrong"> تركه</label>
+        <label><input type="radio" name="q31" value="correct"> أقامه من الموت</label>
+        <label><input type="radio" name="q31" value="wrong"> بكى عليه</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س32: في أي مدينة قال بولس "بدموع كثيرة" أنذرهم؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q32" value="wrong"> أفسس</label>
+        <label><input type="radio" name="q32" value="wrong"> فيلبي</label>
+        <label><input type="radio" name="q32" value="correct"> ميليتس</label>
+        <label><input type="radio" name="q32" value="wrong"> أنطاكية</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س33: من الذي حذر بولس أنه سيُقيد ويسلَّم لليهود؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q33" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q33" value="wrong"> يعقوب</label>
+        <label><input type="radio" name="q33" value="correct"> أغابوس النبي</label>
+        <label><input type="radio" name="q33" value="wrong"> لوقا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س34: من الذي قال لبولس: "لماذا تبكي وتكسر قلبي"؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q34" value="wrong"> لوقا</label>
+        <label><input type="radio" name="q34" value="wrong"> تيطس</label>
+        <label><input type="radio" name="q34" value="correct"> أهل قيصرية</label>
+        <label><input type="radio" name="q34" value="wrong"> أغريباس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س35: ماذا قال بولس عن نفسه عندما كان ذاهباً لأورشليم؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q35" value="wrong"> لا أخاف</label>
+        <label><input type="radio" name="q35" value="wrong"> لن أذهب</label>
+        <label><input type="radio" name="q35" value="correct"> مستعد أن أموت من أجل اسم الرب يسوع</label>
+        <label><input type="radio" name="q35" value="wrong"> سأهرب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س36: من هو الذي أخذ بولس إلى بيته في أورشليم؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q36" value="wrong"> أكيلا</label>
+        <label><input type="radio" name="q36" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q36" value="correct"> مناسون القبرصي</label>
+        <label><input type="radio" name="q36" value="wrong"> يعقوب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س37: من رئيس الكنيسة الذي استقبل بولس في أورشليم؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q37" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q37" value="wrong"> يوحنا</label>
+        <label><input type="radio" name="q37" value="correct"> يعقوب</label>
+        <label><input type="radio" name="q37" value="wrong"> لوقا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س38: ماذا فعل بولس مع الرجال الأربعة الذين كان عليهم نذر؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q38" value="wrong"> تركهم</label>
+        <label><input type="radio" name="q38" value="wrong"> صلى معهم</label>
+        <label><input type="radio" name="q38" value="correct"> تطهر معهم</label>
+        <label><input type="radio" name="q38" value="wrong"> أعطاهم نقوداً</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س39: ماذا اتهم اليهود بولس أنه أدخله الهيكل؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q39" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q39" value="wrong"> أبلوس</label>
+        <label><input type="radio" name="q39" value="correct"> تروفيمس الأفسسي</label>
+        <label><input type="radio" name="q39" value="wrong"> تيطس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س40: ماذا فعل الجمع عندما أمسكوا بولس في الهيكل؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q40" value="wrong"> حملوه</label>
+        <label><input type="radio" name="q40" value="wrong"> تركوه</label>
+        <label><input type="radio" name="q40" value="correct"> ضربوه وحاولوا قتله</label>
+        <label><input type="radio" name="q40" value="wrong"> أعطوه هدايا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س41: من أنقذ بولس من أيدي اليهود في الهيكل؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q41" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q41" value="correct"> قائد الجند الروماني</label>
+        <label><input type="radio" name="q41" value="wrong"> يعقوب</label>
+        <label><input type="radio" name="q41" value="wrong"> تيموثاوس</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س42: ماذا ظن القائد أن بولس هو؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q42" value="wrong"> مسيحي</label>
+        <label><input type="radio" name="q42" value="wrong"> روماني</label>
+        <label><input type="radio" name="q42" value="correct"> مصري أثار فتنة</label>
+        <label><input type="radio" name="q42" value="wrong"> يوناني</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س43: بأي لغة تحدث بولس للشعب من على الدرج؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q43" value="wrong"> يونانية</label>
+        <label><input type="radio" name="q43" value="correct"> عبرانية</label>
+        <label><input type="radio" name="q43" value="wrong"> لاتينية</label>
+        <label><input type="radio" name="q43" value="wrong"> قبطية</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س44: ماذا قال بولس عن نفسه أمام الشعب؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q44" value="wrong"> أنا يوناني</label>
+        <label><input type="radio" name="q44" value="wrong"> أنا روماني</label>
+        <label><input type="radio" name="q44" value="correct"> أنا رجل يهودي من طرسوس</label>
+        <label><input type="radio" name="q44" value="wrong"> أنا مصري</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س45: ماذا رأى بولس في الطريق إلى دمشق؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q45" value="wrong"> ملاك</label>
+        <label><input type="radio" name="q45" value="wrong"> نار</label>
+        <label><input type="radio" name="q45" value="correct"> نور عظيم</label>
+        <label><input type="radio" name="q45" value="wrong"> سحاب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س46: من الذي شفاه من العمى في دمشق؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q46" value="wrong"> بطرس</label>
+        <label><input type="radio" name="q46" value="wrong"> لوقا</label>
+        <label><input type="radio" name="q46" value="correct"> حنانيا</label>
+        <label><input type="radio" name="q46" value="wrong"> برنابا</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س47: ماذا قال الرب لحنانيا عن بولس؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q47" value="wrong"> رجل خاطئ</label>
+        <label><input type="radio" name="q47" value="wrong"> لا يليق</label>
+        <label><input type="radio" name="q47" value="correct"> إناء مختار</label>
+        <label><input type="radio" name="q47" value="wrong"> غريب</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س48: ماذا فعل الشعب عندما سمع أن بولس مرسل للأمم؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q48" value="wrong"> فرحوا</label>
+        <label><input type="radio" name="q48" value="wrong"> صلوا</label>
+        <label><input type="radio" name="q48" value="correct"> صرخوا ليُرفع مثل هذا عن الأرض</label>
+        <label><input type="radio" name="q48" value="wrong"> تركوه</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س49: ماذا أمر القائد أن يفعلوا ببولس لمعرفة الحقيقة؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q49" value="wrong"> أن يُقتل</label>
+        <label><input type="radio" name="q49" value="wrong"> أن يُترك</label>
+        <label><input type="radio" name="q49" value="correct"> أن يُجلد</label>
+        <label><input type="radio" name="q49" value="wrong"> أن يُسجن</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>س50: ماذا قال بولس للقائد ليتجنب الجلد؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q50" value="wrong"> أنا يهودي</label>
+        <label><input type="radio" name="q50" value="wrong"> أنا تلميذ</label>
+        <label><input type="radio" name="q50" value="correct"> أنا رجل روماني</label>
+        <label><input type="radio" name="q50" value="wrong"> أنا من أفسس</label>
+      </div>
+    </div>
+</div>
+
+  <button onclick="checkAnswers()">تسليم الامتحان</button>
+  <div class="result" id="result"></div>
 
   <script>
-    const questions = [
-      {question: "في أي إصحاح نزل الروح القدس على الرسل؟", answers:["أعمال 1","أعمال 2","أعمال 3","أعمال 4"], correct:"أعمال 2"},
-      {question: "من أسلم في بيت كورنيليوس؟", answers:["بطرس","بولس","مرقس","يوحنا"], correct:"بطرس"},
-      {question: "من كتب معظم الرسائل؟", answers:["بطرس","بولس","يوحنا","متى"], correct:"بولس"},
-      {question: "أين كان فيلبس يبشر بعد حلول الروح القدس؟", answers:["أورشليم","السامرة","أنطاكية","روما"], correct:"السامرة"},
-      {question: "أين شفى بطرس المولود أعسر؟", answers:["أعمال 2","أعمال 3","أعمال 5","أعمال 7"], correct:"أعمال 3"},
-      {question: "من أخبر عن رؤية عيلياء؟", answers:["بطرس","بولا","فيليب","يهوذا"], correct:"فيليب"},
-      {question: "من أرشد بطرس لبيت كورنيليوس؟", answers:["الملك","الملاك","الروح القدس","بولس"], correct:"الملاك"},
-      {question: "أين أُسلم العشرات بعد خطبة بطرس؟", answers:["أورشليم","السامرة","بيت لحم","جليلي"], correct:"أورشليم"},
-      {question: "من كان الملك الذي قتل يعقوب؟", answers:["هرودس","أوكتافيوس","بيلاطس","بيتر"], correct:"هرودس"},
-      {question: "من كان الشاب الذي سقط من الشرفة؟", answers:["أبولس","أمين","يوحنا","أحيم"], correct:"أمين"},
-      {question: "أين أرسل بولس إلى روما؟", answers:["أورشليم","روما","أنطاكية","فيليبي"], correct:"روما"},
-      {question: "من رافق بولس في رحلته؟", answers:["مرقس","برنابا","يوحنا","بطرس"], correct:"برنابا"},
-      {question: "من ألقى الخطبة في عيد الخمسين؟", answers:["بطرس","بولس","فيليب","يوحنا"], correct:"بطرس"},
-      {question: "أين أُرسل ستيفانوس ليبشر؟", answers:["أورشليم","السامرة","روما","أفريقية"], correct:"أورشليم"},
-      {question: "من أُلقي بالسجن مع بطرس؟", answers:["يوحنا","بولس","ستيفانوس","مرقس"], correct:"يوحنا"},
-      {question: "من ألقى القبض على بولس؟", answers:["اليهود","الرومان","الأنباط","السامريون"], correct:"اليهود"},
-      {question: "من ساعد في إقناع بطرس بالمجيء إلى كورنيليوس؟", answers:["الروح القدس","الملائكة","فيليب","ستيفانوس"], correct:"الروح القدس"},
-      {question: "من تبع بولس في رحلاته الثانية؟", answers:["سيلس","برنابا","مرقس","يوحنا"], correct:"سيلس"},
-      {question: "من كان رسول الأمم؟", answers:["بطرس","بولس","يوحنا","فيليب"], correct:"بولس"},
-      {question: "أين أُلقي ستيفانوس؟", answers:["في السامرة","في أورشليم","في روما","في أنطاكية"], correct:"في أورشليم"},
-      {question: "من شفى أبرصًا في دمشق؟", answers:["بطرس","بولس","فيليب","يوحنا"], correct:"بولس"},
-      {question: "من كان أول شهيد مسيحي؟", answers:["ستيفانوس","بطرس","بولس","يوحنا"], correct:"ستيفانوس"},
-      {question: "أين التقى بولس مع بطرس لأول مرة؟", answers:["أورشليم","روما","السامرة","أنطاكية"], correct:"أورشليم"},
-      {question: "من أجرى شفاء على باب الهيكل؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بطرس"},
-      {question: "من كتب إلى الرسل بعد حل الروح القدس؟", answers:["بطرس","بولس","يوحنا","يعقوب"], correct:"بطرس"},
-      {question: "من رافق بولس إلى مالطا؟", answers:["سيافون","سيلس","برنابا","مرقس"], correct:"سيلس"},
-      {question: "أين أُرسلت الكنيسة الأولى؟", answers:["أورشليم","السامرة","روما","اليونان"], correct:"أورشليم"},
-      {question: "من ألقى الخطبة بعد قيامة المسيح؟", answers:["بطرس","بولس","ستيفانوس","يوحنا"], correct:"بطرس"},
-      {question: "من حوّل فيلبس إلى السامرة؟", answers:["الملاك","الروح القدس","بطرس","بولس"], correct:"الروح القدس"},
-      {question: "من كتب معظم الرسائل إلى الكنائس؟", answers:["بطرس","بولس","يوحنا","يعقوب"], correct:"بولس"},
-      {question: "من أجرى شفاء في أنطاكية؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بولس"},
-      {question: "من ألقى القبض على ستيفانوس؟", answers:["اليهود","الرومان","الملائكة","السامريون"], correct:"اليهود"},
-      {question: "من أسلم في فيلبي؟", answers:["لوكية","ليديا","ساريا","ديونيسيوس"], correct:"ليديا"},
-      {question: "من شفى عبد السيد؟", answers:["بطرس","بولس","يوحنا","ستيفانوس"], correct:"بولس"},
-      {question: "من تنبأ عن سفر بولس إلى روما؟", answers:["الملائكة","بطرس","فيليب","ستيفانوس"], correct:"الملائكة"},
-      {question: "من حاول إيقاف رسالة الرسل؟", answers:["اليهود","الرومان","الأنباط","الملائكة"], correct:"اليهود"},
-      {question: "من أرسل بولس رسالة إلى كورنثوس؟", answers:["بولس","بطرس","يوحنا","مرقس"], correct:"بولس"},
-      {question: "أين اجتمع الرسل بعد قيامة المسيح؟", answers:["أورشليم","روما","السامرة","اليونان"], correct:"أورشليم"},
-      {question: "من أرشد بولس في رحلته إلى أثينا؟", answers:["الروح القدس","الملائكة","بطرس","ستيفانوس"], correct:"الروح القدس"},
-      {question: "من شفى العرج أمام الهيكل؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بطرس"},
-      {question: "من كتب رسالة إلى أفسس؟", answers:["بولس","بطرس","يوحنا","ستيفانوس"], correct:"بولس"},
-      {question: "أين التقى بولس مع لوقا؟", answers:["أورشليم","روما","السامرة","أنتاكية"], correct:"أورشليم"},
-      {question: "من ساعد بطرس في السجن؟", answers:["الملاك","بولس","ستيفانوس","فيليب"], correct:"الملاك"},
-      {question: "أين كانت رسالة بولس إلى رومية؟", answers:["روما","أورشليم","السامرة","فيليبي"], correct:"روما"},
-      {question: "من تنبأ عن قيامة المسيح؟", answers:["ملاك","ستيفانوس","بطرس","يوحنا"], correct:"ملاك"},
-      {question: "أين أُقيمت الكنيسة الأولى؟", answers:["أورشليم","روما","السامرة","أنطاكية"], correct:"أورشليم"},
-      {question: "من أجرى شفاء في أورشليم بعد صعود المسيح؟", answers:["بطرس","بولس","يوحنا","مرقس"], correct:"بطرس"},
-      {question: "من كان الملك الذي حاكم بولس؟", answers:["أغريباس","هرودس","بيلاطس","نيرون"], correct:"أغريباس"},
-      {question: "من ألقى القبض على بطرس في عيد الفصح؟", answers:["اليهود","الرومان","الملائكة","ستيفانوس"], correct:"اليهود"},
-      {question: "أين بدأ بولس رحلته الأولى؟", answers:["أنطاكية","أورشليم","روما","السامرة"], correct:"أنطاكية"},
-      {question: "من ساعد في تعليم الرسل؟", answers:["بطرس","بولس","يوحنا","ستيفانوس"], correct:"بطرس"},
-      {question: "من أسلم أول الوثنيين؟", answers:["بطرس","بولس","فيليب","يوحنا"], correct:"بطرس"}
-    ];
-
-    const quizContainer = document.getElementById("quiz");
-
-    questions.forEach((q,index)=>{
-      const qDiv = document.createElement("div");
-      qDiv.classList.add("question");
-
-      const qTitle = document.createElement("p");
-      qTitle.textContent = (index+1)+". "+q.question;
-      qDiv.appendChild(qTitle);
-
-      const answersDiv = document.createElement("div");
-      answersDiv.classList.add("answers");
-
-      q.answers.forEach(ans=>{
-        const label = document.createElement("label");
-        const input = document.createElement("input");
-        input.type="radio";
-        input.name="question"+index;
-        input.value=ans;
-        label.appendChild(input);
-        label.appendChild(document.createTextNode(ans));
-        answersDiv.appendChild(label);
-      });
-
-      qDiv.appendChild(answersDiv);
-      quizContainer.appendChild(qDiv);
-    });
-
-    function submitQuiz(){
-      let score=0;
-      questions.forEach((q,index)=>{
-        const selected = document.querySelector('input[name="question'+index+'"]:checked');
-        if(selected && selected.value===q.correct) score++;
-      });
-      document.getElementById("result").textContent = `لقد حصلت على ${score} من ${questions.length}`;
+    function checkAnswers() {
+      let correct = document.querySelectorAll('input[value="correct"]:checked').length;
+      let total = 50; // عدد الأسئلة الكلي
+      document.getElementById("result").innerText = "درجتك: " + correct + " من " + total;
     }
   </script>
+
 </body>
 </html>
